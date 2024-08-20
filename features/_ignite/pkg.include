@@ -1,3 +1,4 @@
 dracut-network
-ignition
+#ignition
 curl
+gettext-base

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+/sysroot/usr/bin/dd if=/dev/zero of=/sysroot/var/lib/containerd_storage.img bs=1M count=100000
+/usr/sbin/mkfs.ext4 /sysroot/var/lib/containerd_storage.img
+mkdir -p /sysroot/var/lib/containerd
+mount -o loop /sysroot/var/lib/containerd_storage.img /sysroot/var/lib/containerd
